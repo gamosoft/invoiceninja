@@ -1,0 +1,3 @@
+CREATE DATABASE ninja;
+GRANT ALL PRIVILEGES ON ninja.* TO 'ninja'@'localhost' IDENTIFIED BY 'somep@ssw0rdForSQL';
+FLUSH PRIVILEGES;
