@@ -3,7 +3,7 @@ This set of files builds a docker image with everything needed to run a self-hos
 
 Get more information about this amazing app here: [Invoice Ninja](https://www.invoiceninja.org)
 
-# INSTALLATION STEPS
+# Installation Steps
 ## Build the image
 Download all the files from this repository. If you want, modify some settings in the _.env_ file (such as SMTP settings, etc).
 
