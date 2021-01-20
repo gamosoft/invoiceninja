@@ -2,7 +2,7 @@ FROM debian:stretch-20191014
 
 ENV DEBIAN_FRONTEND=noninteractive
 
-RUN apt-get update && apt-get upgrade
+RUN apt-get --assume-yes update && apt-get --assume-yes upgrade
 RUN apt-get --assume-yes install apt-utils
 RUN apt-get --assume-yes install git procps vim unzip wget dialog
 RUN apt-get --assume-yes install mysql-server
