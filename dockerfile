@@ -5,7 +5,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get --assume-yes update && apt-get --assume-yes upgrade
 RUN apt-get --assume-yes install apt-utils
 RUN apt-get --assume-yes install git procps vim unzip wget dialog
-RUN apt-get --assume-yes install mysql-server
+RUN apt-get --assume-yes install mysql-server dos2unix
 RUN apt-get --assume-yes install nginx
 RUN apt-get --assume-yes install php7.0 php7.0-fpm php7.0-cli php7.0-common php7.0-curl php7.0-gd php7.0-mysql php7.0-xml php7.0-mcrypt php7.0-mbstring
  
@@ -33,5 +33,7 @@ COPY default /etc/nginx/sites-enabled/
 COPY services.sh /services.sh
 # For rpi, need to enable run permissions
 RUN chmod +x services.sh
+# Remove non-unix line endings
+RUN dos2unix services.sh
 
 CMD ["/services.sh"]
